@@ -3,6 +3,23 @@
   text-align: center;
 }
 
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(52, 60, 63);
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
 body {
   background-image: linear-gradient(120deg, #473a0d 0%, #2c0a01 100%);
   color: white;
@@ -56,4 +73,13 @@ body {
 .roll-plus-mod {
   color: rgb(99, 194, 248);
   font-size: 50px;
+}
+
+.div-something-else {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 300px;
+  background: rgb(236, 250, 255);
+  color: black;
 }

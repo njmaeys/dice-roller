@@ -6,6 +6,13 @@ import './App.css';
 // Components
 import Dice from './components/Dice';
 import Results from './components/Results';
+import Nav from './Nav';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
 
 function App() {
   // state stuff
@@ -15,22 +22,30 @@ function App() {
   const [rollPlusMod, setRollPlusMod] = useState(0);
 
   return (
-    <div className="App">
-      <h1>Dice Roller</h1>
-      <Dice 
-        setRollResult={setRollResult}
-        dice={dice}
-        setDice={setDice}
-        diceModifier={diceModifier}
-        setDiceModifier={setDiceModifier}
-        setRollPlusMod={setRollPlusMod}
-      />
-      <Results 
-        rollResult={rollResult} 
-        diceModifier={diceModifier} 
-        rollPlusMod={rollPlusMod}
-      />
-    </div>
+    <Router>
+      <div className="App">
+        <Nav />
+        <div className="div-dice-roller">
+          <h1>Dice Roller</h1>
+          <Dice 
+            setRollResult={setRollResult}
+            dice={dice}
+            setDice={setDice}
+            diceModifier={diceModifier}
+            setDiceModifier={setDiceModifier}
+            setRollPlusMod={setRollPlusMod}
+          />
+          <Results 
+            rollResult={rollResult} 
+            diceModifier={diceModifier} 
+            rollPlusMod={rollPlusMod}
+          />
+        </div>
+        <div className="div-something-else">
+          <h1>More Stuffs</h1>
+        </div>
+      </div>
+    </Router>
   );
 }
 
