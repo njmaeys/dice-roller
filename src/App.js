@@ -10,6 +10,7 @@ import Results from './components/Results';
 function App() {
   // state stuff
   const [rollResult, setRollResult] = useState(0);
+  const [dice, setDice] = useState(20);
 
   return (
     <div className="App">
@@ -17,6 +18,8 @@ function App() {
       <Dice 
         rollResult={rollResult} 
         setRollResult={setRollResult}
+        dice={dice}
+        setDice={setDice}
       />
       <Results 
         rollResult={rollResult} 
