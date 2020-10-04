@@ -1,17 +1,25 @@
 import React from 'react';
 
-const Dice = ({ setRollResult, dice, setDice, diceModifier, setDiceModifier }) => {
+const Dice = ({ setRollResult, dice, setDice, diceModifier, setDiceModifier, setRollPlusMod }) => {
   // Functions
   const setRollResultHandler = (e) => {
     // simply prevent page from full refresh
     e.preventDefault();
 
     let baseRoll = Math.floor(Math.random() * (dice - 1 + 1)) + 1;
+    //if (diceModifier === '') {
+    //  setDiceModifier(0);
+    //  setRollResult(baseRoll + 0);
+    //} else {
+    //  setRollResult(baseRoll + parseInt(diceModifier, 10));
+    //}
     if (diceModifier === '') {
       setDiceModifier(0);
-      setRollResult(baseRoll + 0);
+      setRollResult(baseRoll);
+      setRollPlusMod(baseRoll + 0);
     } else {
-      setRollResult(baseRoll + parseInt(diceModifier, 10));
+      setRollResult(baseRoll);
+      setRollPlusMod(baseRoll + parseInt(diceModifier, 10));
     }
   }
 
