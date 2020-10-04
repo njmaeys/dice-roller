@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Results = ({ rollResult }) => {
+const Results = ({ rollResult, diceModifier }) => {
   // Functions
-  console.log('# REUSULTS #: '+rollResult);
 
   return (
     <div>
-      <p>Your Roll: {rollResult}</p>
+      <p>Your Roll with a {diceModifier} modifier</p>
+      <h3>{rollResult}</h3>
     </div>
   )
 }

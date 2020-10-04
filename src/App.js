@@ -11,18 +11,21 @@ function App() {
   // state stuff
   const [rollResult, setRollResult] = useState(0);
   const [dice, setDice] = useState(20);
+  const [diceModifier, setDiceModifier] = useState(0);
 
   return (
     <div className="App">
       <h1>Dice Roller</h1>
       <Dice 
-        rollResult={rollResult} 
         setRollResult={setRollResult}
         dice={dice}
         setDice={setDice}
+        diceModifier={diceModifier}
+        setDiceModifier={setDiceModifier}
       />
       <Results 
         rollResult={rollResult} 
+        diceModifier={diceModifier} 
       />
     </div>
   );
