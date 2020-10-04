@@ -36,7 +36,7 @@ const Dice = ({ setRollResult, dice, setDice, diceModifier, setDiceModifier, set
       <div className="dice">
         <div className="modifier-input">
           <label className="modifier-label">Modifier</label>
-          <input type="text" value={diceModifier} onChange={modifierHandler} />
+          <input className="modifier-text" type="text" value={diceModifier} onChange={modifierHandler} />
         </div>
         <select className="dice-select-button" onChange={diceHandler}>
           <option value="20">D 20</option>

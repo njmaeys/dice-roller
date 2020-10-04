@@ -1,5 +1,13 @@
+
 .App {
   text-align: center;
+}
+
+body {
+  background-image: linear-gradient(120deg, #473a0d 0%, #2c0a01 100%);
+  color: white;
+  font-family: sans-serif;
+  min-height: 100vh;
 }
 
 .modifier-input {
@@ -11,4 +19,41 @@
 
 .modifier-label {
   padding: 5px;
+}
+
+.modifier-text {
+  width: 25px;
+  text-align: center;
+}
+
+.dice {
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.roll-button,
+.dice-select-button {
+  text-align: center;
+  background: rgb(247, 185, 135);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.roll-button {
+  background: rgb(255, 255, 255);
+  margin-left: 5px;
+}
+
+.dice-modifier-result,
+.roll-result {
+  font-size: 25px;
+  color: rgb(99, 194, 248);
+}
+
+.roll-plus-mod {
+  color: rgb(99, 194, 248);
+  font-size: 50px;
 }
