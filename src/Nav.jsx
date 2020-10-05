@@ -4,22 +4,22 @@ import {
   Link
 } from 'react-router-dom';
 
-function Nav() {
+import logo from './images/d20_logo.png';
 
-  const navStyle = {
-    color: 'white'
-  };
+function Nav() {
 
   return (
     <div>
       <nav>
-        <h3>Logo</h3>
+        <Link to="/">
+          <img className="logo-image" src={logo} alt="Logo" />
+        </Link>
         <ul className="nav-links">
-          <Link style={navStyle} to="/about">
-            <li>About</li>
+          <Link to="/spells">
+            <li>Spells</li>
           </Link>
-          <Link style={navStyle} to="/foobar">
-            <li>Foo Bar</li>
+          <Link to="/items">
+            <li>Items</li>
           </Link>
         </ul>
       </nav>

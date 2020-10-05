@@ -8,8 +8,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   min-height: 10vh;
-  background: rgb(52, 60, 63);
-  color: white;
+  background: rgb(255, 255, 255);
+  color: #002731;
+}
+
+.logo-image {
+  width: 75px;
+  height: 75px;
 }
 
 .nav-links {
@@ -20,11 +25,20 @@ nav {
   list-style: none;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  background-image: linear-gradient(120deg, #473a0d 0%, #2c0a01 100%);
+  background-image: linear-gradient(120deg, #002731 0%, #00bea5 100%);
   color: white;
   font-family: sans-serif;
   min-height: 100vh;
+}
+
+.div-dice-roller {
+  height: 100%;
+  align-items: center;
 }
 
 .modifier-input {
