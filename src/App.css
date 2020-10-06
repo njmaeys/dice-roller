@@ -97,3 +97,33 @@ body {
   background: rgb(236, 250, 255);
   color: black;
 }
+
+.dd5e-dropdown,
+.dd5e-search {
+  text-align: center;
+  background: rgb(247, 185, 135);
+  color: black;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.dd5e-search {
+  background: rgb(255, 255, 255);
+  margin-left: 5px;
+}
+
+.dd5e-result-div {
+  margin: 10px;
+}
+
+.solid-divider {
+  opacity: 50%;
+}
+
+.dd5e-result-desc {
+  text-align: justify;
+  margin: auto;
+  max-width: 80%;
+}
