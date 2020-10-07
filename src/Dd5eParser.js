@@ -15,6 +15,7 @@ function Dd5eParser(props) {
 
   const getInfo = async () => {
     let data = await get5eApiInfo(props.base_url, search);
+    console.log(data);
     setResData(data);
   }
 
@@ -29,6 +30,9 @@ function Dd5eParser(props) {
     e.preventDefault();
     getInfo();
   }
+
+  // TODO going to make this just for the spells for now
+  // modularize this shizzz
 
   return (
     <div>
