@@ -33,6 +33,19 @@ function Dd5eParser(props) {
 
   // TODO going to make this just for the spells for now
   // modularize this shizzz
+  function buildDescArray(desArray) {
+    if (desArray) {
+      let desc = desArray.map((item, index) => {
+      return (
+          <p key={index}>{item}</p>
+        )
+      })
+      return desc
+    } else {
+      let desc = <p></p>
+      return desc
+    }
+  }
 
   return (
     <div>
@@ -46,7 +59,7 @@ function Dd5eParser(props) {
       <div className="dd5e-result-div">
         <hr className="solid-divider"/>
         <h2>{resData.name}</h2>
-        <p className="dd5e-result-desc">{resData.desc}</p>
+        <p className="dd5e-result-desc">{buildDescArray(resData.desc)}</p>
       </div>
     </div>
   );
