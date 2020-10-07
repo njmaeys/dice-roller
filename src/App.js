@@ -29,7 +29,7 @@ function App() {
             render={() => <Dd5eParser 
               page_name='Spells'
               base_url={DD5E_BASE_URL} 
-              initial_url='/api/spells/acid-splash'
+              initial_url='/api/spells/acid-arrow'
               initial_json={SPELL_LINKS}
             />}
           />
