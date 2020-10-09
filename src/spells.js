@@ -43,9 +43,9 @@ function Spells(resData) {
       <hr className="solid-divider"/>
       <h2>{resData.name}</h2>
       <div className="spell-basic-info-div">
-        <h3>Range: {resData.range}</h3>
-        <h3>Base Damage: {updateDamageDealt(resData.damage)}</h3>
-        <h3>Damage Type: {updateDamageType(resData.damage)}</h3>
+        <h3>Range: <b className="spell-info-blue">{resData.range}</b></h3>
+        <h3>Base Damage: <b className="spell-info-blue">{updateDamageDealt(resData.damage)}</b></h3>
+        <h3>Damage Type: <b className="spell-info-blue">{updateDamageType(resData.damage)}</b></h3>
       </div>
       <ul className="dd5e-result-desc">{parseArrayForDesc(resData.desc)}</ul>
     </div>

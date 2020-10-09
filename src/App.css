@@ -137,3 +137,7 @@ button:hover {
   margin: auto;
   max-width: 80%;
 }
+
+.spell-info-blue {
+  color: rgb(99, 194, 248);
+}
