@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 
-import { get5eApiInfo, buildDropDownFromArray } from './utility';
+import Spells from './spells';
+import { 
+  get5eApiInfo, 
+  buildDropDownFromArray 
+} from './utility';
 
 // I really dont think i have "props" right but ehh 
 function Dd5eParser(props) {
-  // TODO could use a special parser per api endpoint actually
-  // but the boilerplate here is pretty solid
-
-  // TODO There is a bug where when i switch /spells or /monsters it doesn't reset
-  // has to be something to do with the state
 
   const [search, setSearch] = useState(props.initial_url);
   const [resData, setResData] = useState(false);
 
   const getInfo = async () => {
     let data = await get5eApiInfo(props.base_url, search);
-    console.log(data);
+    //console.log(data);
     setResData(data);
   }
 
@@ -31,19 +30,12 @@ function Dd5eParser(props) {
     getInfo();
   }
 
-  // TODO going to make this just for the spells for now
-  // modularize this shizzz
-  function buildDescArray(desArray) {
-    if (desArray) {
-      let desc = desArray.map((item, index) => {
-      return (
-          <p key={index}>{item}</p>
-        )
-      })
-      return desc
-    } else {
-      let desc = <p></p>
-      return desc
+  const loadProperParser = (apiData) => {
+    switch(props.page_name) {
+      case 'Spells':
+        return Spells(apiData);
+      default:
+        return "foo";
     }
   }
 
@@ -56,11 +48,7 @@ function Dd5eParser(props) {
         </select>
         <button className="dd5e-search">Search</button>
       </form>
-      <div className="dd5e-result-div">
-        <hr className="solid-divider"/>
-        <h2>{resData.name}</h2>
-        <p className="dd5e-result-desc">{buildDescArray(resData.desc)}</p>
-      </div>
+      {loadProperParser(resData)}
     </div>
   );
 }
